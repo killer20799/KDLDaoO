@@ -2,6 +2,7 @@ $(document).ready(function () {
 	sliderImage();
 	otherNewClient();
 	bannerSlider();
+	roomTypeSlide();
 });
 function sliderImage() {
 	var swiper = new Swiper('.slider-image .swiper-container', {
@@ -27,6 +28,21 @@ function otherNewClient() {
 		spaceBetween: 20,
 		slidesPerView: 3,
 		speed: 2000,
+		breakpoints: {
+			1024: {
+				slidesPerView: 2,
+			},
+			576: {
+				slidesPerView: 1,
+			}
+		}
+	})
+}
+function roomTypeSlide() {
+	var swiper = new Swiper('.room-type .swiper-container', {
+		slidesPerView: 3,
+		speed: 2000,
+		spaceBetween: 20,
 		breakpoints: {
 			1024: {
 				slidesPerView: 2,
