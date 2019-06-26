@@ -3,6 +3,7 @@ $(document).ready(function () {
 	otherNewClient();
 	bannerSlider();
 	roomTypeSlide();
+	homeBannerSlider();
 });
 function sliderImage() {
 	var swiper = new Swiper('.slider-image .swiper-container', {
@@ -15,6 +16,12 @@ function sliderImage() {
   
 }
 function bannerSlider() {
+	var swiper = new Swiper('.banner .swiper-container', {
+		speed: 2000,
+	  });
+  
+}
+function homeBannerSlider() {
 	var swiper = new Swiper('.home-banner .swiper-container', {
 		speed: 2000,
 		pagination: {
