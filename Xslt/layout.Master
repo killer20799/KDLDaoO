@@ -18,11 +18,12 @@
     <portal:StyleSheetCombiner ID="StyleSheetCombiner" runat="server" IncludejQueryUI="false" JQueryUIThemeName="smoothness" />
     <portal:Favicon ID="Favicon1" runat="server" />
     <portal:ScriptLoader ID="ScriptLoader1" runat="server" />
-    <portal:SkinFolderScript ID="SkinFolderScript1" runat="server" ScriptFileName="js/plugins.min.js" AddToCombinedScript="true" />
-    <portal:SkinFolderScript ID="SkinFolderScript2" runat="server" ScriptFileName="js/customize.min.js" AddToCombinedScript="true" />
-    <portal:SkinFolderScript ID="SkinFolderScript3" runat="server" ScriptFileName="js/canhcam.js" AddToCombinedScript="true" />
+	<portal:SkinFolderScript ID="SkinFolderScript1" runat="server" ScriptFileName="js/main.min.js"
+		AddToCombinedScript="true" />
+	<portal:SkinFolderScript ID="SkinFolderScript2" runat="server" ScriptFileName="js/global.min.js"
+		AddToCombinedScript="true" />
     <portal:GoogleAnalyticsScript ID="GoogleAnalyticsScript1" runat="server" />
-
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,400i,500,500i,700,700i&amp;display=swap" rel="stylesheet">
     <!--*********************************************************************************************-->
     <!-- Canh Cam - the best Web Solutions Provider - http://www.canhcam.vn                          -->
     <!-- 156 Nguyen Van Thu, District 1, Ho Chi Minh City, Viet Nam.                                 -->
@@ -40,21 +41,42 @@
         <asp:ScriptManager ID="ScriptManager1" EnablePageMethods="true" runat="server" />
         <div id="wrapper">
             <header class="header">
-		        <%--<div class="container">
-                    <div class="logo">
-                        <portal:SiteLogo ID="SiteLogo1" runat="server" />
-                    </div>
-                    <div class="top-nav">
-                        <portal:SearchInput ID="SearchInput1" CssClass="search" runat="server" />
-                        <portal:LanguageSelector ID="LanguageSelector1" XsltFileName="Language.xslt" ShowActive="true" runat="server" />
-                    </div>
-                    <div class="wrap-nav">
-				        <div class="icon-main-menu-mobile"><div class="home-mobi"></div></div>
-                        <div class="menu-main-pc">
+		        <div class="header-info">
+                    <div class="container">
+                        <div class="desktop-header-1">
+                            <portal:modulewrapper id="mdl140" runat="server" configuremoduleid="140" />
+                            <portal:modulewrapper id="mdl141" runat="server" configuremoduleid="141" />
+                            <div class="search-box">
+                                <button class="searchicon"><em class="mdi mdi-magnify"></em></button>
+                                <div class="container">
+                                    <portal:modulewrapper id="mdl142" runat="server" configuremoduleid="142" />
+                                </div>
+                            </div>
+                            <portal:modulewrapper id="mdl145" runat="server" configuremoduleid="145" />
                         </div>
-			        </div>
-                    <div class="clear"></div>
-		        </div>--%>
+                    </div>
+                </div>
+                <div class="header-nav">
+                    <div class="container">
+                        <div class="desktop-header-2">
+                            <div class="logo">
+                                <a href="">
+                                    <portal:modulewrapper id="mdl139" runat="server" configuremoduleid="139" />
+                                </a>
+                                <div class="sub-logo"><img src="Data/Sites/1/media/bottom-header.png" alt=""></div>
+                            </div>
+                            
+                            <portal:modulewrapper id="mdl146" runat="server" configuremoduleid="146" />
+                        </div>
+                    </div>
+                </div>
+                <div class="backdrop"></div>
+                <div class="container">
+                    <div class="mobile-header">
+                        <div class="mobile-tab"></div>
+                        <div class="toggle-menu"><span></span><span></span><span></span></div>
+                    </div>
+                </div>
                 <asp:Panel ID="divAlt1" runat="server" CssClass="altcontent1">
                     <asp:ContentPlaceHolder ID="altContent1" runat="server">
                     </asp:ContentPlaceHolder>
@@ -77,18 +99,52 @@
 				</asp:Panel>
             </main>
             <footer class="footer">
-		        <div class="container">
-                    <asp:Panel ID="divAltContent2" runat="server" CssClass="altcontent2">
-                        <asp:ContentPlaceHolder ID="altContent2" runat="server"></asp:ContentPlaceHolder>
-                    </asp:Panel>
-                    <div class="col-sm-5 fmenu PaddR0">
-                        <%--<portal:ModuleWrapper ID="mdl55" runat="server" ConfigureModuleId="55" />--%>
+		        <div class="footer-top">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-3">
+                                <div class="address">
+                                    <h2>Khu du lịch Đảo Ó Đồng Trường</h2><a href="https://goo.gl/maps/EECkV2ydunBMUkwY7"><span class="mdi mdi-map-marker"></span><span>Số 1B, đường Tôn Đức Thắng, Tổ 3B, Khu phố 8, Thị trấn Vĩnh An, Huyện Vĩnh Cửu, Tỉnh Đồng Nai.</span></a><a href=""><span class="mdi mdi-phone"></span><span>(0251) 8626999 </span></a><a href=""><span class="mdi mdi-phone"></span><span>0988 60 60 06</span></a>
+                                </div>
+                                <div class="social-icons"><a class="mdi mdi-facebook" href=""></a><a class="mdi mdi-instagram" href=""></a><a class="mdi mdi-youtube" href=""></a></div>
+                            </div>
+                            <div class="col-lg-2 col-sm-4">
+                                <div class="content">
+                                    <h2>Khách sạn</h2>
+                                    <nav><a href="">View hồ Trị An</a><a href="">View sân vườn</a><a href="">View hồ bơi</a></nav>
+                                </div>
+                            </div>
+                            <div class="col-lg-2 col-sm-4">
+                                <div class="content">
+                                    <h2>Giải trí</h2>
+                                    <nav><a href="">View hồ Trị An</a><a href="">View sân vườn</a><a href="">View hồ bơi</a></nav>
+                                </div>
+                            </div>
+                            <div class="col-lg-2 col-sm-4">
+                                <div class="content">
+                                    <h2>Liên kết nhanh</h2>
+                                    <nav><a href="">View hồ Trị An</a><a href="">View sân vườn</a><a href="">View hồ bơi</a></nav>
+                                </div>
+                            </div>
+                            <div class="col-lg-3">
+                                <div class="content">
+                                    <h2>Theo dõi chúng tôi</h2>
+                                    <div class="boximg"><img src="Data/Sites/1/media/follow_us.jpg" alt=""></div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="col-sm-7 info-f">
-                        <portal:CopyrightLabel id="cl1" runat="server" ShowYear="true" BeginYear="2015" />
+                </div>
+                <div class="footer-bottom">
+                    <div class="container">
+                        <div class="row">
+                            <div class="copyright">
+                                <p>© 2019 Khu du lịch Đảo Ó. All rights reserved. Desgined by Cánh Cam.</p>
+                            </div>
+                            <nav><a href="">Điều khoản sử dụng</a><a href="">Chính sách bảo mật</a></nav>
+                        </div>
                     </div>
-		        </div>
-                <div class="clear"></div>
+                </div>
 	        </footer>
             <%--<ul>
                 <portal:welcomemessage id="WelcomeMessage" runat="server" renderaslistitem="true" listitemcss="firstnav" />
@@ -134,6 +190,7 @@
                     </nav>
                 </div>
             </div>
+            
             <script type="text/javascript">
                 $(document).ready(function () {
                     $("#pullmenucms").click(function (e) {
