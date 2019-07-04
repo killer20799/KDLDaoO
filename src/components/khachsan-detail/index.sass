@@ -17,14 +17,16 @@
 				object-fit: cover
 	.col-lg-8
 		.row
-			padding-left: 10px
-			padding-right: 10px
 			.other-img
 				flex: 0 0 20%
 				max-width: 20%
 				padding-left: 5px
 				padding-right: 5px
 				padding-top: 10px
+				&:first-child
+					padding-left: 0
+				&:last-child
+					padding-right: 0
 				.boximg
 					height: 85px
 					@media (max-width: 767.98px)
@@ -73,7 +75,6 @@
 			padding-bottom: 0
 			background: none
 			.content
-				margin-top: 10px
 				padding-top: 30px
 				padding-bottom: 30px
 				background: #ecf0f3
@@ -83,6 +84,8 @@
 			.col-8
 				p
 					margin-right: 20px
+		@media (max-width: 991.98px)
+			margin-top: 10px
 		@media (max-width: 575.98px)
 			.col-4
 				h3
@@ -103,7 +106,7 @@
 		.phone, .mail
 			display: inline-block
 			&:before
-				font-family: 'Material Design Icons'
+				font-family: "Material Design Icons"
 				color: #ffffff
 				height: 50px
 				width: 50px
@@ -124,7 +127,7 @@
 			display: flex
 			border-top: 1px solid #e1e1e1
 			&:before
-				content: '\f3fd'
+				content: "\f3fd"
 			p
 				display: inline-flex
 				flex-direction: column
@@ -135,6 +138,8 @@
 					color: #000
 					font-weight: 500
 					display: inline-block
+					@media (max-width: 991.98px)
+						font-size: 16px
 					@media (max-width: 575.98px)
 						font-size: 13px
 		.mail
@@ -147,12 +152,12 @@
 			align-items: center
 			width: 100%
 			&:before
-				content: '\f1ee'
+				content: "\f1ee"
 			span
 				font-size: 16px
 				color: rgb(51, 51, 51)
 				font-weight: 500
-				@media (max-width: 575.98px)
+				@media (max-width: 1024px)
 					font-size: 13px
 		
 		@media (max-width: 1199.98px)
@@ -226,7 +231,7 @@
 						display: block
 
 .khachsan-info
-	background-image: url('../img/khachsan/chitiet-1/bg-1.png')
+	background-image: url("../img/khachsan/chitiet-1/bg-1.png")
 	background-position: right
 	background-repeat: no-repeat
 	h2
@@ -239,7 +244,7 @@
 .khachsan-utility
 	padding-top: 70px
 	padding-bottom: 65px
-	background-image: url('../img/banner/bg-3.jpg')
+	background-image: url("../img/banner/bg-3.jpg")
 	@media (max-width: 767.98px)
 		padding-top: 35px
 		padding-bottom: 30px
@@ -284,7 +289,7 @@
 		li
 			display: flex
 			&:before
-				content: '\2022'
+				content: "\2022"
 				font-size: 22px
 				display: inline-block
 				padding-right: 15px

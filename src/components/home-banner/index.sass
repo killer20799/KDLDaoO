@@ -33,9 +33,15 @@
                     h3
                         font-size: 18px
                 @media (max-width: 1024px)
-                    width: 50%
+                    width: 40%
+                    margin-top: 35%
                     h3
                         font-size: 16px
+                @media (max-width: 991.98px)
+                    margin-top: 45%
+                @media (max-width: 767.98px)
+                    margin-top: 40%
+                    width: 50%
                 @media (max-width: 575.98px)
                     h3
                         font-size: 12px
@@ -70,11 +76,11 @@
         .swiper-pagination-bullet-active
             background-color: #3bbc25
         @media (max-width: 991.98px)
-            bottom: 115px
+            bottom: 325px
         @media (max-width: 767.98px)
-            bottom: 400px
+            bottom: 320px
         @media (max-width: 575.98px)
-            bottom: 550px
+            bottom: 310px
             .swiper-pagination-bullet
                 width: 25px
 
@@ -85,10 +91,10 @@
         transform: translateX(-50%)
         z-index: 2
         width: 100%
-        @media (max-width: 767.98px)
+        @media (max-width: 991.98px)
             position: static
             transform: none
-            background-image: url('../img/banner/bg-3.jpg')
+            background-image: url("../img/banner/bg-3.jpg")
             padding-bottom: 20px
             .form-datphong
                 padding: 15px 15px
@@ -105,8 +111,8 @@
                     display: flex
                     flex-wrap: wrap
                     .form-group
-                        flex: 0 0 100%
-                        max-width: 100%
+                        flex: 0 0 49%
+                        max-width: 49%
                         flex-direction: column
                         display: flex
                         margin-bottom: 20px
@@ -116,6 +122,8 @@
                         input[type="text"]
                             width: 100%
                             margin: 0
+                        &:nth-child(2)
+                            margin-left: auto
 
     .form-datphong
         border-radius: 5px
@@ -134,7 +142,7 @@
             @media (max-width: 1199.98px)
                 font-size: 20px
             @media (max-width: 1024px)
-                font-size: 13px
+                font-size: 15px
         .wrap-form
             display: flex
             .form-group
@@ -166,9 +174,10 @@
                     @media (max-width: 1199.98px)
                         width: 145px
                     @media (max-width: 1024px)
-                        width: 100px
+                        width: 150px
                         margin-left: 10px
                         padding-left: 10px
+                    
                     
                         
         .select-detail
@@ -197,17 +206,19 @@
                     color: #000
                     outline: none
                 @media (max-width: 1024px)
-                    width: 70px
+                    width: 80px
                     margin-left: 10px
         
         .select-main
             display: flex
-            @media (max-width: 767.98px)
+            @media (max-width: 991.98px)
                 .select-detail
                     flex: 0 0 33.3333%
                     max-width: 33.3333%
+                    display: flex
+                    flex-direction: column
                     select
-                        width: 150px
+                        width: 96%
                     &:first-child
                         select
                             margin-left: 0
@@ -216,36 +227,15 @@
                     
                     &:nth-child(2)
                         select
-                            margin-left: 5px
+                            margin-left: auto
+                            margin-right: auto
                         h4
                             margin-left: 5px
                     &:nth-child(3)
                         select
-                            margin-left: 10px
+                            margin-left: auto
                         h4
                             margin-left: 10px
-            @media (max-width: 575.98px)
-                flex-direction: column
-                .select-detail
-                    flex: 0 0 100%
-                    max-width: 100%
-                    select
-                        width: 100%
-                        margin-bottom: 20px
-                    &:first-child
-                        select
-                            margin-left: 0
-                    
-                    &:nth-child(2)
-                        select
-                            margin-left: 0
-                        h4
-                            margin-left: 0
-                    &:nth-child(3)
-                        select
-                            margin-left: 0
-                        h4
-                            margin-left: 0
                         
         .btn-submit
             display: flex
@@ -254,10 +244,8 @@
             margin-left: 20px
             @media (max-width: 1024px)
                 margin-left: 10px
-            @media (max-width: 767.98px)
+            @media (max-width: 991.98px)
                 margin-top: 20px
-            @media (max-width: 575.98px)
-                margin-top: 0
             a
                 width: 180px
                 display: flex
@@ -274,5 +262,5 @@
                 @media (max-width: 1199.98px)
                     width: 145px
                 @media (max-width: 1024px)
-                    width: 100px
+                    width: 150px
                     font-size: 13px

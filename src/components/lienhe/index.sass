@@ -2,7 +2,9 @@
     .fullcontent
         margin-right: 50px
         height: 310px
-        @media (max-width: 1024px)
+        @media (max-width: 1199.98px)
+            margin-right: 20px
+        @media (max-width: 991.98px)
             margin-right: 0
             height: auto
         figure
@@ -34,13 +36,13 @@
                 margin-bottom: 20px
                 label
                     font-weight: 500
-                    width: 350px
+                    width: 375px
                 input[type="text"]
                     height: 45px
                     border-radius: 5px
                     outline: none
                     border: 1px solid #bebebe
-                    width: 350px
+                    width: 375px
                     padding-left: 20px
                     padding-right: 20px
                     &:focus
@@ -53,19 +55,26 @@
                         margin-left: auto
                 @media (max-width: 1199.98px)
                     label
-                        width: 300px
+                        width: 290px
                     input[type="text"]
-                        width: 300px
-                @media (max-width: 1024px)
+                        width: 290px
+                @media (max-width: 991.98px)
                     &:nth-child(1), &:nth-child(2)
                         margin-top: 20px
+                    flex: 0 0 48%
+                    max-width: 48%
+                    margin-left: auto
+                    &:nth-child(1), &:nth-child(3)
+                        margin-left: 0
                     label
-                        width: 325px
+                        width: 100%
                     input[type="text"]
-                        width: 325px
+                        width: 100%
                 @media (max-width: 767.98px)
                     flex : 0 0 100%
                     max-width: 100%
+                    &:nth-child(2)
+                        margin-top: 0
                     label
                         margin-left: 0
                         width: 100%
@@ -73,6 +82,7 @@
                         margin-left: 0
                         width: 100%
                 textarea
+                    padding-left: 20px
                     height: 110px
                     border-radius: 5px
                     outline: none

@@ -17,14 +17,16 @@
 				object-fit: cover
 	.col-lg-8
 		.row
-			padding-left: 10px
-			padding-right: 10px
 			.other-img
 				flex: 0 0 20%
 				max-width: 20%
 				padding-left: 5px
 				padding-right: 5px
 				padding-top: 10px
+				&:first-child
+					padding-left: 0
+				&:last-child
+					padding-right: 0
 				.boximg
 					height: 85px
 					@media (max-width: 767.98px)
@@ -63,7 +65,6 @@
 			@media (max-width: 1199.98px)
 				margin-left: 0
 		p
-			margin-bottom: 15px
 			font-size: 14px
 			color: rgb(51, 51, 51)
 			font-weight: 500
@@ -99,82 +100,13 @@
 					.col-7
 						p
 							font-size: 12px
-.info-contact
-	.phone, .mail
-		display: inline-block
-		&:before
-			font-family: 'Material Design Icons'
-			color: #ffffff
-			height: 50px
-			width: 50px
-			border-radius: 50%
-			background: #b7b7b7
-			display: inline-flex
-			justify-content: center
-			align-items: center
-			font-size: 25px
-		span
-			margin-left: 15px
-	.phone
-		margin-bottom: 20px
-		margin-left: 30px
-		padding-top: 25px
-		margin-right: 30px
-		width: 100%
-		display: flex
-		align-items: center
-		border-top: 1px solid #e1e1e1
-		&:before
-			content: '\f3fd'
-		p
-			display: inline-flex
-			flex-direction: column
-			margin-left: 15px
-			margin-bottom: 0
-			a
-				font-size: 18px
-				color: #000
-				font-weight: 500
-				display: inline-block
-				@media (max-width: 575.98px)
-					font-size: 13px
-	.mail
-		margin-left: 30px
-		margin-right: 30px
-		padding-bottom: 25px
-		border-bottom: 1px solid #e1e1e1
-		display: flex
-		justify-content: flex-start
-		align-items: center
-		width: 100%
-		&:before
-			content: '\f1ee'
-		span
-			font-size: 16px
-			color: rgb(51, 51, 51)
-			font-weight: 500
-			@media (max-width: 575.98px)
-				font-size: 13px
 	
-	@media (max-width: 1199.98px)
-		.phone, .mail
-			margin-left: 10px
-			margin-right: 10px
-			&:before
-				height: 40px
-				width: 40px
-		.phone
-			padding-top: 20px
-		.mail
-			padding-bottom: 20px
-	@media (max-width: 1024px)
-		.phone, .mail
-			margin-left: 30px
-			margin-right: 30px
-	.social-icons
+	.row.social-icons
 		padding-bottom: 40px
 		@media (max-width: 1199.98px)
 			padding-bottom: 20px
+		@media (max-width: 991.98px)
+			margin-top: 20px
 		.fb-like
 			margin-left: 25px
 			display: flex
@@ -198,6 +130,81 @@
 			font-size: 16px
 		.mdi-pencil
 			margin-right: 15px
+.info-contact
+	.phone, .mail
+		display: inline-block
+		&:before
+			font-family: "Material Design Icons"
+			color: #ffffff
+			height: 50px
+			width: 50px
+			border-radius: 50%
+			background: #b7b7b7
+			display: inline-flex
+			justify-content: center
+			align-items: center
+			font-size: 25px
+		span
+			margin-left: 15px
+	.phone
+		margin-bottom: 20px
+		margin-left: 30px
+		margin-top: 25px
+		padding: 0
+		margin-right: 30px
+		width: 100%
+		display: flex
+		align-items: center
+		border-top: 1px solid #e1e1e1
+		&:before
+			content: "\f3fd"
+		p
+			display: inline-flex
+			flex-direction: column
+			margin-left: 15px
+			margin-bottom: 0
+			a
+				font-size: 18px
+				color: #000
+				font-weight: 500
+				display: inline-block
+				@media (max-width: 1024px)
+					font-size: 16px
+				@media (max-width: 575.98px)
+					font-size: 13px
+	.mail
+		margin-left: 30px
+		margin-right: 30px
+		padding-bottom: 25px
+		border-bottom: 1px solid #e1e1e1
+		display: flex
+		justify-content: flex-start
+		align-items: center
+		width: 100%
+		&:before
+			content: "\f1ee"
+		span
+			font-size: 16px
+			color: rgb(51, 51, 51)
+			font-weight: 500
+			@media (max-width: 1024px)
+				font-size: 13px
+	
+	@media (max-width: 1199.98px)
+		.phone, .mail
+			margin-left: 10px
+			margin-right: 10px
+			&:before
+				height: 40px
+				width: 40px
+		.phone
+			padding-top: 20px
+		.mail
+			padding-bottom: 20px
+	@media (max-width: 1024px)
+		.phone, .mail
+			margin-left: 30px
+			margin-right: 30px
 .room-type.section-kdldaoo
 	padding-top: 0
 	.container
@@ -245,7 +252,7 @@
 						display: block
 
 .khachsan-info
-	background-image: url('../img/khachsan/chitiet-1/bg-1.png')
+	background-image: url("../img/khachsan/chitiet-1/bg-1.png")
 	background-position: right
 	background-repeat: no-repeat
 	h2
@@ -281,7 +288,7 @@
 		li
 			display: flex
 			&:before
-				content: '\2022'
+				content: "\2022"
 				font-size: 22px
 				display: inline-block
 				padding-right: 15px
