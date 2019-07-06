@@ -107,9 +107,12 @@
     </xsl:if>
     
     <div class="boximg">
-        <a data-fancybox="gallery" href="">
+        <a>
 			<xsl:attribute name="href">
 				<xsl:value-of select="ImageUrl"></xsl:value-of>
+			</xsl:attribute>
+			<xsl:attribute name="data-fancybox">
+				<xsl:text disable-output-escaping="yes">Gallery</xsl:text>
 			</xsl:attribute>
             <img>
                 <xsl:attribute name="src">
@@ -119,7 +122,6 @@
                     <xsl:value-of select="Title"></xsl:value-of>
                 </xsl:attribute>
             </img>
-            <xsl:value-of select="EditLink" disable-output-escaping="yes"></xsl:value-of>
         </a>
     </div>
     <xsl:if test="position() =1 ">
