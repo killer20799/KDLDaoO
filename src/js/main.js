@@ -62,6 +62,8 @@ $(document).ready(function () {
 			}).watch()
 		}
 	}
+	changeValueSubmitBtn2();
+	changeValueSubmitBtn();
 	toggleMenu();
 	sliderImage();
 	otherNewClient();
@@ -85,22 +87,19 @@ function sliderImage() {
 	  });
   
 }
-// function moveLogo() {
-// 	let moveContactInfo = new MappingListener({
-// 		selector: '.header .logo',
-// 		mobileWrapper: '.mobile-header',
-// 		mobileMethod: 'appendTo',
-// 		desktopWrapper: '.desktop-header-2',
-// 		desktopMethod: 'prependTo',
-// 		breakpoint: 992,
-// 	}).watch()
-// }
+function changeValueSubmitBtn() {
+	$('.lienhe .wrap-form .frm-btnwrap .frm-btn .frm-btn-submit').val('GỬI THÔNG TIN')
+}
+function changeValueSubmitBtn2() {
+	$('.datphong .wrap-form .frm-btnwrap .frm-btn .frm-btn-submit').val('GỬI THÔNG TIN')
+}
 function bannerSlider() {
 	var swiper = new Swiper('.banner .swiper-container', {
 		speed: 2000,
 	  });
   
 }
+
 function homeBannerSlider() {
 	var swiper = new Swiper('.home-banner .swiper-container', {
 		speed: 2000,
