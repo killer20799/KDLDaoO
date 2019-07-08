@@ -29,7 +29,7 @@
     <!-- 156 Nguyen Van Thu, District 1, Ho Chi Minh City, Viet Nam.                                 -->
     <!-- Phone: (+84) 8 38238364 – Fax: (+84) 8 38238365 - Email: info@canhcam.vn                    -->
     <!-- Facebook: https://www.facebook.com/canhcam.vn                                               -->
-    <!--*********************************************************************************************-->
+      <!--*********************************************************************************************-->
 </head>
 <body id="Body" runat="server" class="canhcam">
     <portal:FacebookSdk ID="fbsdk" runat="server" />
@@ -65,7 +65,6 @@
                                 </a>
                                 <div class="sub-logo"><img src="Data/Sites/1/media/bottom-header.png" alt=""></div>
                             </div>
-                            
                             <portal:modulewrapper id="mdl146" runat="server" configuremoduleid="146" />
                         </div>
                     </div>
