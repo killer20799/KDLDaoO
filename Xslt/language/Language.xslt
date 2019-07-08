@@ -22,15 +22,14 @@
                 <xsl:attribute name="title">
                     <xsl:value-of select="Title"></xsl:value-of>
                 </xsl:attribute>
-                <!--<img>
+                <img>
                     <xsl:attribute name="src">
                         <xsl:value-of select="ImageUrl"></xsl:value-of>
                     </xsl:attribute>
                     <xsl:attribute name="alt">
                         <xsl:value-of select="Title"></xsl:value-of>
                     </xsl:attribute>
-                </img>-->
-                <xsl:value-of select="Title"></xsl:value-of>
+                </img>
             </a>
         </li>
     </xsl:template>
