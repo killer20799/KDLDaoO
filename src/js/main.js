@@ -71,7 +71,7 @@ $(document).ready(function () {
 	roomTypeSlide();
 	homeBannerSlider();
 	toggleSearchBox();
-	
+	homeBlock3();
 	Header.moveSearchBox();
 	Header.moveNav();
 	Header.moveContactInfo();
@@ -83,6 +83,16 @@ function sliderImage() {
 		navigation: {
 		  nextEl: '.slider-image .nav-next',
 		  prevEl: '.slider-image .nav-prev',
+		},
+	  });
+  
+}
+function homeBlock3() {
+	var swiper = new Swiper('.home-block-3 .swiper-container', {
+		speed: 2000,
+		navigation: {
+		  nextEl: '.home-block-3 .swiper-button .nav-next',
+		  prevEl: '.home-block-3 .swiper-button .nav-prev',
 		},
 	  });
   
@@ -139,5 +149,3 @@ function roomTypeSlide() {
 		}
 	})
 }
-
-Header.toggleMenu();
