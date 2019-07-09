@@ -2,14 +2,24 @@
 <%@ Register Namespace="CanhCam.Web.BannerUI" Assembly="CanhCam.Features.Banner" TagPrefix="portal" %>
 <%@ Register Namespace="CanhCam.Web.NewsUI" Assembly="CanhCam.Features.News" TagPrefix="portal" %>
 <%@ Register Namespace="CanhCam.Web.DealerUI" Assembly="CanhCam.Features.DealerLocator" TagPrefix="portal" %>
+<%@ Register Namespace="CanhCam.Web.ProductUI" Assembly="CanhCam.Features.Product" TagPrefix="portal" %>
 <%@ Register Namespace="CanhCam.Web.SharedFilesUI" Assembly="CanhCam.Features.SharedFiles" TagPrefix="portal" %>
 
 <portal:ZonesDisplaySettings runat="server" 
 	ShowDescription="true"
-    DescriptionControlType="textarea"
+    DescriptionControlType="editor"
     ShowPrimaryImage="true"
-    ShowSecondImage="false"
+    ShowSecondImage="true"
 	/>
+<portal:ProductDisplaySettings runat="server" 
+	ShowVideo= "true"
+	ShowOldPrice="true"
+    ShowProductCode="true"
+    ShowSubTitle="true"
+    ShowRelatedProduct="true"
+	ShowStockQuantity="true"
+	/>
+
 <portal:BannerDisplaySettings runat="server" 
 	ShowDescription="true"
     DescriptionControlType="editor"
