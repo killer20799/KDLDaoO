@@ -6,19 +6,23 @@
 		<div class="giaitri section-kdldaoo">
 			<div class="container">
 				<h2 class="main-title">
-					<xsl:value-of select="/NewsList/ZoneTitle" disable-output-escaping="yes"></xsl:value-of>
+					<xsl:value-of select="/ZoneList/ModuleTitle" disable-output-escaping="yes"></xsl:value-of>
 				</h2>
 				<p>
-					<xsl:value-of select="/NewsList/ZoneDescription" disable-output-escaping="yes"></xsl:value-of>
+					<xsl:value-of select="/ZoneList/Description" disable-output-escaping="yes"></xsl:value-of>
 				</p>
 				<div class="row">
-					<xsl:apply-templates select="/NewsList/News"></xsl:apply-templates>
+					<xsl:apply-templates select="/ZoneList/Zone"></xsl:apply-templates>
 				</div>
 			</div>
 		</div>
 	</xsl:template>
-	
-	<xsl:template match="News">
+	<!-- <xsl:template match="Zone">
+		<xsl:if test="IsActive='true'">
+			<xsl:apply-templates select="Zone" mode="Child"></xsl:apply-templates>
+		</xsl:if>
+	</xsl:template> -->
+	<xsl:template match="Zone">
 		<div class="col-lg-4 col-sm-6">
 			<figure>
 				<div class="boximg">
@@ -40,7 +44,6 @@
 								<xsl:value-of select="Title"></xsl:value-of>
 							</xsl:attribute>
 						</img>
-						<xsl:value-of select="EditLink" disable-output-escaping="yes"></xsl:value-of>
 					</a>
 				</div>
 				<figcaption>
@@ -60,7 +63,6 @@
 									</xsl:attribute>
 									<xsl:value-of select="Title" disable-output-escaping="yes"></xsl:value-of>
 								</a>
-								<xsl:value-of select="EditLink" disable-output-escaping="yes"></xsl:value-of>
 							</h3>
 						</div>
 					</div>
