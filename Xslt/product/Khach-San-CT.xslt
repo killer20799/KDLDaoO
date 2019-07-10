@@ -6,7 +6,7 @@
 		<div class="khachsan-detail section-kdldaoo">
 			<div class="container">
 				<h2 class="main-title">
-					<xsl:value-of disable-output-escaping="yes" select="/ZoneList/ZoneTitle"></xsl:value-of>
+					<xsl:value-of disable-output-escaping="yes" select="/ZoneList/Title"></xsl:value-of>
 				</h2>
 				<div class="row">
 					<div class="col-lg-8">

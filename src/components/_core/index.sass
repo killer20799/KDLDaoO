@@ -91,3 +91,150 @@ html, body
 		font-size: 28px
 	@media (max-width: 575.98px)
 		font-size: 22px
+.Module-230
+	.subscribe
+		.subscribefrm
+			position: relative
+			span
+				position: absolute
+				left: 0
+				bottom: -30px
+			&:after
+				content: ''
+				display: block
+				position: absolute
+				left: 0
+				bottom: 6px
+				width: 100%
+				height: 1px
+				background: #fafafa
+			input
+				color: #ffffff
+				font-size: 16px
+				font-style: normal
+				background: none
+				border: none
+				padding: 16px 120px 16px 0
+				&:focus
+					outline: none
+				&::placeholder
+					font-style: italic
+					font-size: 14px
+					color: #ffffff
+			button
+				border: 1px solid #59ccca
+				border-radius: 25px
+				background: none
+				padding: 4px 70px 4px 20px
+				color: #ffffff
+				transition: .2s all ease-in-out
+				text-transform: uppercase
+				&:focus
+					outline: none
+				&:hover
+					background: #59ccca
+	@media screen and(max-width:1025px)
+		margin-top: 50px
+		width: 100%
+		display: flex
+		justify-content: center
+		align-items: center
+		.subscribe
+			.subscribefrm
+				display: flex
+				justify-content: space-between
+				align-items: center
+	@media screen and(max-width:768px)
+		.subscribe
+			.subscribefrm
+				input
+					padding: 16px 30px 16px 0
+				button
+					padding: 4px 20px
+		
+.fb-page
+	width: 100%
+//Module Css
+.Module-228
+	@media (max-width: 991.98px)
+		position: absolute
+		top: 20px
+		right: 20px
+.Module-192
+	.swiper-button-prev
+			background: none
+			background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%2027%2044'%3E%3Cpath%20d%3D'M0%2C22L22%2C0l2.1%2C2.1L4.2%2C22l19.9%2C19.9L22%2C44L0%2C22L0%2C22L0%2C22z'%20fill%3D'%23ffffff'%2F%3E%3C%2Fsvg%3E")
+			background-repeat: no-repeat
+			background-position: center
+			background-size: 1rem 1rem
+			outline: none
+			width: 40px
+			height: 40px
+	.swiper-button-next
+		right: 50px
+		background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%2027%2044'%3E%3Cpath%20d%3D'M27%2C22L27%2C22L5%2C44l-2.1-2.1L22.8%2C22L2.9%2C2.1L5%2C0L27%2C22L27%2C22z'%20fill%3D'%23ffffff'%2F%3E%3C%2Fsvg%3E") 
+		background-repeat: no-repeat
+		background-position: center
+		background-size: 1rem 1rem
+		outline: none
+		width: 40px
+		height: 40px
+	.swiper-button-prev
+		left: 50px
+
+//Home form  TOP 
+.homepage
+	.form-container
+		display: flex
+		justify-content: space-between
+		align-items: center
+		@media screen and(max-width:992px)
+			flex-flow: column
+	.wrap-form
+		display: -webkit-box
+
+.Module-231
+	width: 100%
+	#ctl00_mainContent_ctl01_pnlQuestions
+		width: 90%
+	.rcTable
+		tbody
+			tr
+				display: flex
+				position: relative
+				td
+				
+					&:not(.rcInputCell)
+						position: absolute
+						top: 8px
+						right: 5px
+	.frm-btn-reset
+		display: none
+	.frm-btn-submit
+		background: none
+		display: flex
+		justify-content: center
+		align-items: flex-end
+		margin-left: 20px
+		width: 120px
+		display: flex
+		height: 35px
+		justify-content: center
+		align-items: center
+		border: 2px solid rgb(102, 220, 213)
+		border-radius: 25px
+		color: rgb(102, 220, 213)
+		text-transform: uppercase
+		font-size: 16px
+
+		
+		@media (max-width: 1239.98px)
+			width: 90px
+		@media (max-width: 1199.98px)
+			width: 70px
+			margin-right: 70px
+		@media (max-width: 992px)
+			width: 120px
+		@media (max-width: 576px)
+			width: 150px
+			font-size: 13px

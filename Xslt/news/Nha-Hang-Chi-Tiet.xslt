@@ -47,6 +47,7 @@
 		<xsl:if test="position()=1">
 			<div class="Briefcontent">
 				<xsl:value-of select="BriefContent" disable-output-escaping="yes"></xsl:value-of>
+				<xsl:value-of select="EditLink" disable-output-escaping="yes"></xsl:value-of>
 			</div>
 			<div class="attributes">
 				<div class="row">
@@ -61,6 +62,8 @@
 				<div class="swiper-wrapper">
 					<xsl:apply-templates select="NewsImages" mode="Slide"></xsl:apply-templates>
 				</div>
+				<div class="swiper-button-prev"></div>
+				<div class="swiper-button-next"></div>
 			</div>
 			
 		</xsl:if>

@@ -112,12 +112,22 @@
 				display: -webkit-box
 				display: flex
 				flex-wrap: wrap
+				.select-main
+					display: flex
+					flex: 0 0 100%
+					justify-content: center
+				.frm-btn
+					display: flex
+					justify-content: center
+					align-items: center
 				.form-group
-					flex: 0 0 49%
-					max-width: 49%
+					flex: 0 0 100%
+					max-width: 100%
 					flex-direction: column
 					display: flex
 					margin-bottom: 20px
+					.RadPicker
+						width: 100%
 					label
 						margin: 0
 						margin-bottom: 15px
@@ -125,7 +135,17 @@
 						width: 100%
 						margin: 0
 					&:nth-child(2)
-						margin-left: auto
+	@media (max-width:576.98px)
+		.form-datphong
+			.wrap-form
+				.select-main
+					align-items: flex-start
+					flex-flow: column
+					width: 100%
+				.form-group
+					width: 100%
+					.RadPicker
+						width: 100% !important
 
 .form-datphong
 	border-radius: 5px
@@ -146,7 +166,7 @@
 		@media (max-width: 1024px)
 			font-size: 15px
 	.wrap-form
-		display: flex
+		display: -webkit-box
 		.form-group
 			display: flex
 			flex-direction: column

@@ -67,9 +67,14 @@ header
 	.desktop-header-1
 		display: flex
 		align-items: center
+		margin-top: 20px
+
 		padding-top: 15px
 		padding-bottom: 15px
+
 		@media (max-width: 991.98px)
+			align-items: flex-start
+			margin-left: 20px
 			flex-direction: column
 	.phone
 		display: flex
@@ -275,10 +280,7 @@ header
 						left: 160px
 						transform: translateX(-50%)
 						margin-top: 0
-		.desktop-header-1
-			display: flex
-			align-items: center
-			margin-top: 20px
+		
 		.mobile-header
 			display: block
 			&.active

@@ -44,6 +44,30 @@
 		.content
 			height: 100%
 			width: 100%
+			table
+				tbody
+					tr
+						td
+							&:first-child
+								font-weight: 700
+						&:nth-child(2)
+							td
+								&:nth-child(2)
+									font-size: 16px
+									color: rgb(181, 54, 36)
+									font-weight: 700
+						&:not(:first-child)
+							td
+								&:nth-child(2)
+									white-space: nowrap
+								
+						display: flex
+						align-items: flex-start
+						justify-content: flex-start
+						td
+							&:first-child
+								wi
+
 		.row
 			margin: 0
 			&:nth-child(2)

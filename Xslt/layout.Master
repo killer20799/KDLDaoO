@@ -123,7 +123,7 @@
 				<div class="footer-top">
 					<div class="container">
 						<div class="row">
-							<div class="col-lg-3">
+							<div class="col-md-3 " >
 								<div class="address">
 									<portal:modulewrapper id="mdl159" runat="server" configuremoduleid="159" />
 								</div>
@@ -131,24 +131,24 @@
 									<portal:modulewrapper id="mdl164" runat="server" configuremoduleid="164" />
 								</div>
 							</div>
-							<div class="col-lg-2 col-sm-4">
+							<div class="col-md-2 col-sm-4">
 								<div class="content">
 
 									<portal:modulewrapper id="mdl160" runat="server" configuremoduleid="160" />
 
 								</div>
 							</div>
-							<div class="col-lg-2 col-sm-4">
+							<div class="col-md-2 col-sm-4">
 								<div class="content">
 									<portal:modulewrapper id="mdl161" runat="server" configuremoduleid="161" />
 								</div>
 							</div>
-							<div class="col-lg-2 col-sm-4">
+							<div class="col-md-2 col-sm-4">
 								<div class="content">
 									<portal:modulewrapper id="mdl162" runat="server" configuremoduleid="162" />
 								</div>
 							</div>
-							<div class="col-lg-3">
+							<div class="col-md-3 col-sm-6">
 								<div class="content">
 									<h2>Theo dõi chúng tôi</h2>
 									<portal:modulewrapper id="mdl227" runat="server" configuremoduleid="227" />
@@ -219,7 +219,8 @@
 					</nav>
 				</div>
 			</div>
-
+			<div id="fb-root"></div>
+			<script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.3"></script>
 			<script type="text/javascript">
 				$(document).ready(function () {
 					$("#pullmenucms").click(function (e) {
