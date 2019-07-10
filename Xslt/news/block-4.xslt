@@ -30,19 +30,40 @@
 		</xsl:choose>
 	</xsl:template>
 	<xsl:template match="News" mode="News1">
-        <div class="row">
-            <div class="col-lg-6 col-md-8">
-                <div class="main-news">
-                    <figure>
-                        <div class="boximg"><img src="./img/home/news_1.jpg" alt=""></div>
-                        <figcaption>
-                            <date>20/05/2019</date>
-                            <h3>Khám phá vẻ đẹp đảo Ó - Đồng Trường</h3>
-                            <p>Khi bạn đã quá mệt mỏi với công việc, bị bủa vây bởi những khói bụi của cuộc sống đô thị thì còn gì tuyệt vời hơn là được cùng bạn bè đắm chìm trong không gian trong lành, thanh mát, được thưởng thức những món ẩm thực dân dã. Đảo Ó - Đồng Trường là một lựa chọn thú vị.</p>
-                        </figcaption>
-                    </figure>
-                </div>
+        <xsl:if test="position()=1">
+            <xsl:text disable-output-escaping="yes">&lt;div class="row"&gt;</xsl:text>
+            <xsl:text disable-output-escaping="yes">&lt;div class="col-lg-6 col-md-8"&gt;</xsl:text>
+        </xsl:if>
+            <div class="main-news">
+                <figure>
+                    <div class="boximg">
+                        <a>
+                            <xsl:attribute name="href">
+                                <xsl:value-of select="Url"></xsl:value-of>
+                            </xsl:attribute>
+                            <xsl:attribute name="title">
+                                <xsl:value-of select="Title"></xsl:value-of>
+                            </xsl:attribute>
+                            <img class="lazyload">
+                                <xsl:attribute name="data-src">
+                                    <xsl:value-of select="ImageUrl"></xsl:value-of>
+                                </xsl:attribute>
+                                <xsl:attribute name="alt">
+                                    <xsl:value-of select="Title"></xsl:value-of>
+                                </xsl:attribute>
+                            </img>
+                        </a>
+                    </div>
+                    <figcaption>
+                        <date><xsl:value-of select="CreatedDate" disable-output-escaping="yes"></xsl:value-of></date>
+                        <h3><xsl:value-of select="Title" disable-output-escaping="yes"></xsl:value-of></h3>
+                        <p><xsl:value-of select="BriefContent" disable-output-escaping="yes"></xsl:value-of></p>
+                    </figcaption>
+                </figure>
             </div>
+        <xsl:if test="position()=1">
+            <xsl:text disable-output-escaping="yes">&lt;/div&gt;</xsl:text>
+        </xsl:if>
             <div class="col-lg-6 col-md-4">
                 <div class="row">
                     <div class="col-lg-12">
