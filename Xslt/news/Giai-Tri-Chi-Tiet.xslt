@@ -14,7 +14,7 @@
 							<xsl:value-of disable-output-escaping="yes" select="/NewsDetail/BriefContent"></xsl:value-of>
 						</div>
 					</div>
-					<div class="col-lg-4">
+					<div class="col-lg-8">
 						<div class="boximg">
 							<xsl:apply-templates select="/NewsDetail/NewsImages" mode="Image1"></xsl:apply-templates>
 						</div>
@@ -23,36 +23,20 @@
 				<div class="row main-icons">
 					<xsl:apply-templates select="/NewsDetail/NewsAttributes"></xsl:apply-templates>
 					
-					
 				</div>
 			</div>
 		</div>
 		<div class="slider-image section-kdldaoo">
 			<div class="container">
-				<h2 class="main-title">Hình ảnh</h2>
-				<div class="row">
-					<div class="col-md-2">
-						<div class="btn-left">
-							<div class="nav-prev"></div>
-						</div>
+				
+				<div class="swiper-container">
+					<div class="swiper-wrapper">
+						<xsl:apply-templates select="/NewsDetail/NewsImages" mode="Slide"></xsl:apply-templates>
 					</div>
-					<div class="col-md-8">
-						<div class="swiper-container">
-							<div class="swiper-wrapper">
-								<xsl:apply-templates select="/NewsDetail/NewsImages" mode="Slide"></xsl:apply-templates>
-							</div>
-						</div>
-					</div>
-					<div class="col-md-2">
-						<div class="btn-right">
-							<div class="nav-next"></div>
-						</div>
-					</div>
-					<div class="mobile-nav">
-						<div class="nav-prev"></div>
-						<div class="nav-next"></div>
-					</div>
+					<div class="swiper-button-prev"></div>
+					<div class="swiper-button-next"></div>
 				</div>
+				
 			</div>
 		</div>
 		<div class="giaitri section-kdldaoo">
@@ -61,12 +45,10 @@
 					<xsl:value-of select="/NewsDetail/NewsOtherText"></xsl:value-of>
 				</h2>
 				<div class="row">
-					<div class="swiper-container">
-						<div class="swiper-wrapper">
-							<xsl:apply-templates select="/NewsDetail/NewsOther"></xsl:apply-templates>
-							
-						</div>
-					</div>
+					
+					<xsl:apply-templates select="/NewsDetail/NewsOther"></xsl:apply-templates>
+					
+					
 				</div>
 			</div>
 		</div>
@@ -74,7 +56,7 @@
 	
 	
 	<xsl:template match="NewsImages" mode="Image1">
-		<xsl:if test="position() =1">
+		<xsl:if test="position() =2">
 			<img>
 				<xsl:attribute name="src">
 					<xsl:value-of select="ImageUrl"></xsl:value-of>
@@ -86,7 +68,7 @@
 		</xsl:if>
 	</xsl:template>
 	<xsl:template match="NewsImages" mode="Slide">
-		<xsl:if test="position() > 1">
+		<xsl:if test="position() > 2">
 			<div class="swiper-slide">
 				<div class="boximg">
 					<img>
@@ -117,7 +99,7 @@
 		</div>
 	</xsl:template>
 	<xsl:template match="NewsOther">
-		<div class="swiper-slide">
+		<div class="col-lg-4 col-sm-6">
 			<figure>
 				<div class="boximg">
 					<img>

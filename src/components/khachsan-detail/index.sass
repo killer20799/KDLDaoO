@@ -50,6 +50,8 @@
 						td
 							&:first-child
 								font-weight: 700
+							&:nth-child(2)
+								color: #818282
 						&:nth-child(2)
 							td
 								&:nth-child(2)
@@ -57,6 +59,9 @@
 									color: rgb(181, 54, 36)
 									font-weight: 700
 						&:not(:first-child)
+							display: inline-flex
+							height: 40px
+							line-height: 40px
 							td
 								&:nth-child(2)
 									white-space: nowrap
@@ -200,7 +205,7 @@
 				margin-left: 30px
 				margin-right: 30px
 	.social-icons
-		padding-bottom: 40px
+		padding-bottom: 8px
 		@media (max-width: 1199.98px)
 			padding-bottom: 20px
 		.fb-like
@@ -258,6 +263,8 @@
 	background-image: url("/Data/Sites/1/media/khachsan/chitiet-1/bg-1.png")
 	background-position: right
 	background-repeat: no-repeat
+	@media screen and(max-width:768px)
+		background: none
 	h2
 		margin-bottom: 35px
 		font-size: 25px
@@ -269,6 +276,17 @@
 	padding-top: 70px
 	padding-bottom: 65px
 	background-image: url("/Data/Sites/1/media/banner/bg-3.jpg")
+	.row
+		p
+			color: #fff
+			flex: 0 0 33.3333%
+			margin-bottom: 20px
+			display: flex
+			align-items: center
+			justify-content: flex-start
+		@media screen and(max-width:768px)
+			p
+				flex: 0 0 50%
 	@media (max-width: 767.98px)
 		padding-top: 35px
 		padding-bottom: 30px

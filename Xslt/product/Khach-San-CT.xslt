@@ -11,6 +11,7 @@
 				<div class="row">
 					<div class="col-lg-8">
 						<div class="main-img">
+							
 							<xsl:apply-templates select="/ProductDetail/ProductImages" mode="Big"></xsl:apply-templates>
 						</div>
 						<div class="row">
@@ -42,9 +43,10 @@
 			</div>
 		</div>
 		<xsl:if test="count(/ProductDetail/ProductRelated) &gt; 0">
-			<div class="room-type section-kdldaoo">
+			<div class="room-type section-kdldaoo" style="padding-bottom: 0;">
 				<div class="container">
 					<h2>Loại phòng</h2>
+					
 					<div class="row">
 						<div class="swiper-container">
 							<div class="swiper-wrapper">
@@ -61,6 +63,7 @@
 				<div class="row">
 					<div class="col-lg-6">
 						<div class="briefcontent">
+							<xsl:value-of select="EditLink" disable-output-escaping="yes"></xsl:value-of>
 							<xsl:apply-templates select="/ProductDetail/ProductAttributes" mode="Info"></xsl:apply-templates>
 						</div>
 					</div>
@@ -71,6 +74,8 @@
 			<div class="container">
 				<h2>Tiện ích</h2>
 				<div class="row">
+					<xsl:value-of select="EditLink" disable-output-escaping="yes"></xsl:value-of>
+					
 					<xsl:apply-templates select="/ProductDetail/ProductAttributes" mode="Icon"></xsl:apply-templates>
 				</div>
 			</div>
@@ -79,6 +84,8 @@
 			<div class="container">
 				<h2>Ghi chú</h2>
 				<div class="row">
+					<xsl:value-of select="EditLink" disable-output-escaping="yes"></xsl:value-of>
+					
 					<xsl:apply-templates select="/ProductDetail/ProductAttributes" mode="Note"></xsl:apply-templates>
 				</div>
 			</div>
@@ -112,10 +119,13 @@
 					<div class="person">
 						<xsl:text disable-output-escaping="yes">Số người: </xsl:text>
 						<xsl:value-of select="Code"></xsl:value-of>
+						<xsl:text> người</xsl:text>
 					</div>
 					<div class="price">
 						<xsl:text disable-output-escaping="yes">Giá: </xsl:text>
 						<xsl:value-of select="Price"></xsl:value-of>
+						<xsl:text>/đêm</xsl:text>
+						
 					</div>
 				</figcaption>
 			</figure>
@@ -128,6 +138,7 @@
 		
 	</xsl:template>
 	<xsl:template match="ProductAttributes" mode="Icon">
+		
 		<xsl:if test="position() = 2">
 			<xsl:value-of select="Content" disable-output-escaping="yes"></xsl:value-of>
 		</xsl:if>
@@ -141,14 +152,19 @@
 	<xsl:template match="ProductImages" mode="Small">
 		<div class="other-img">
 			<div class="boximg">
-				<img>
-					<xsl:attribute name="src">
-						<xsl:value-of select="ImageUrl"></xsl:value-of>
+				<a data-fancybox="hotel-image">
+					<xsl:attribute name="href">
+						<xsl:value-of disable-output-escaping="yes" select="ImageUrl"></xsl:value-of>
 					</xsl:attribute>
-					<xsl:attribute name="alt">
-						<xsl:value-of select="Title"></xsl:value-of>
-					</xsl:attribute>
-				</img>
+					<img>
+						<xsl:attribute name="src">
+							<xsl:value-of select="ImageUrl"></xsl:value-of>
+						</xsl:attribute>
+						<xsl:attribute name="alt">
+							<xsl:value-of select="Title"></xsl:value-of>
+						</xsl:attribute>
+					</img>
+				</a>
 			</div>
 		</div>
 	</xsl:template>
@@ -156,14 +172,19 @@
 		
 		<xsl:if test="position()=1">
 			<div class="boximg">
-				<img>
-					<xsl:attribute name="src">
-						<xsl:value-of select="ImageUrl"></xsl:value-of>
+				<a data-fancybox="hotel-image">
+					<xsl:attribute name="href">
+						<xsl:value-of disable-output-escaping="yes" select="ImageUrl"></xsl:value-of>
 					</xsl:attribute>
-					<xsl:attribute name="alt">
-						<xsl:value-of select="Title"></xsl:value-of>
-					</xsl:attribute>
-				</img>
+					<img>
+						<xsl:attribute name="src">
+							<xsl:value-of select="ImageUrl"></xsl:value-of>
+						</xsl:attribute>
+						<xsl:attribute name="alt">
+							<xsl:value-of select="Title"></xsl:value-of>
+						</xsl:attribute>
+					</img>
+				</a>
 			</div>
 		</xsl:if>
 		
