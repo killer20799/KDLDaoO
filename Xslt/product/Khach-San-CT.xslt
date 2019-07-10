@@ -153,16 +153,19 @@
 		</div>
 	</xsl:template>
 	<xsl:template match="ProductImages" mode="Big">
-		<div class="boximg">
-			<img>
-				<xsl:attribute name="src">
-					<xsl:value-of select="ImageUrl"></xsl:value-of>
-				</xsl:attribute>
-				<xsl:attribute name="alt">
-					<xsl:value-of select="Title"></xsl:value-of>
-				</xsl:attribute>
-			</img>
-		</div>
+		
+		<xsl:if test="position()=1">
+			<div class="boximg">
+				<img>
+					<xsl:attribute name="src">
+						<xsl:value-of select="ImageUrl"></xsl:value-of>
+					</xsl:attribute>
+					<xsl:attribute name="alt">
+						<xsl:value-of select="Title"></xsl:value-of>
+					</xsl:attribute>
+				</img>
+			</div>
+		</xsl:if>
 		
 	</xsl:template>
 </xsl:stylesheet>
