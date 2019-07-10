@@ -105,10 +105,7 @@ function sliderImage() {
 function homeBlock3() {
   var swiper = new Swiper(".home-block-3 .swiper-container", {
     speed: 2000,
-    navigation: {
-      nextEl: ".home-block-3 .swiper-button .nav-next",
-      prevEl: ".home-block-3 .swiper-button .nav-prev"
-    }
+    navigation: {}
   });
 }
 
@@ -144,6 +141,10 @@ function otherNewClient() {
     spaceBetween: 20,
     slidesPerView: 3,
     speed: 2000,
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev"
+    },
     breakpoints: {
       992: {
         slidesPerView: 2

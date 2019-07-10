@@ -62,11 +62,9 @@
 			<div class="container">
 				<h2>Phòng khác</h2>
 				<div class="row">
-					<div class="swiper-container">
-						<div class="swiper-wrapper">
-							<xsl:apply-templates select="/ProductDetail/ProductOther" mode="Slide"></xsl:apply-templates>
-						</div>
-					</div>
+					
+					<xsl:apply-templates select="/ProductDetail/ProductOther" mode="Slide"></xsl:apply-templates>
+					
 				</div>
 			</div>
 		</div>
@@ -108,7 +106,7 @@
 		</xsl:if>
 	</xsl:template>
 	<xsl:template match="ProductOther" mode="Slide">
-		<div class="swiper-slide">
+		<div class="col-lg-4 col-sm-6">
 			<figure>
 				<div class="boximg">
 					<img>

@@ -52,12 +52,15 @@
 			<div class="attributes">
 				<div class="row">
 					<xsl:value-of disable-output-escaping="yes" select="FullContent"></xsl:value-of>
+					<xsl:value-of select="EditLink" disable-output-escaping="yes"></xsl:value-of>
 				</div>
 			</div>
 		</xsl:if>
 	</xsl:template>
 	<xsl:template match="News" mode="Image">
 		<xsl:if test="position() =1">
+			<xsl:value-of select="EditLink" disable-output-escaping="yes"></xsl:value-of>
+			
 			<div class="swiper-container">
 				<div class="swiper-wrapper">
 					<xsl:apply-templates select="NewsImages" mode="Slide"></xsl:apply-templates>
@@ -88,6 +91,8 @@
 	<xsl:template match="News" mode="Menu">
 		
 		<xsl:apply-templates select="NewsImages" mode="MenuItem"></xsl:apply-templates>
+		<xsl:value-of select="EditLink" disable-output-escaping="yes"></xsl:value-of>
+		
 	</xsl:template>
 	<xsl:template match="NewsImages" mode="MenuItem">
 		<div class="col-sm-6 col-lg-4">
