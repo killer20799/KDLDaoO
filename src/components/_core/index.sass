@@ -195,11 +195,30 @@ html, body
 			flex-flow: column
 	.Module-231
 		display: -webkit-box
+		@media screen and(max-width:992px)
+			display: flex
+			justify-content: center
+			align-items: center
+			.ModuleContent
+				width: 100%
 
 .Module-231
 	width: 100%
 	#ctl00_mainContent_ctl01_pnlQuestions
-		width: 90%
+		width: 100%
+		@media screen and(max-width:1200px)
+			width: 93%
+		@media screen and(max-width:992px)
+			width: 100%
+			.form-group
+				width: 100% !important
+			.select-main
+				width: 100% !important
+			.select-detail
+				flex: 0 0 33.3333%
+
+			.RadPicker
+				width: 100% !important
 	.rcTable
 		tbody
 			tr
@@ -233,11 +252,7 @@ html, body
 		
 		@media (max-width: 1239.98px)
 			width: 90px
-		@media (max-width: 1199.98px)
-			width: 70px
-			margin-right: 70px
 		@media (max-width: 992px)
-			width: 120px
-		@media (max-width: 576px)
 			width: 150px
+		@media (max-width: 576px)
 			font-size: 13px
