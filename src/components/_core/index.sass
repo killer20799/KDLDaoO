@@ -256,3 +256,37 @@ html, body
 			width: 150px
 		@media (max-width: 576px)
 			font-size: 13px
+//Searchform css
+.searchbox
+	margin-left: 16px
+	display: flex
+	justify-content: center
+	align-items: center
+	position: relative
+
+	input
+
+		pointer-events: none
+		border: 2px solid #8ec443
+		padding: 0 30px 0 16px
+		border-radius: 15px
+		font-size: 15px
+		font-style: normal
+		transition: .3s all ease-in-out
+		&::placeholder
+			font-size: 14px
+			font-style: italic
+		&:focus
+			outline: none
+	.searchbutton
+		background: #9f9d9e
+		color: #ffffff
+		position: relative
+		border: none
+		width: 30px
+		height: 30px
+		
+		em
+			font-size: 20px
+		&:focus
+			outline: none
